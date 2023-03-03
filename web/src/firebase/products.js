@@ -8,5 +8,3 @@ export const getProducts = async () => {
   const result = data.docs.map((doc) => ({ ...doc.data() }));
   return result;
 };
-
-getProducts();
