@@ -1,9 +1,13 @@
 import React from 'react';
+import NavBar from '../components/NavBar.js';
 
 export default function Store() {
   return (
     <div>
-      Store
+      <NavBar />
+      <main>
+        Store
+      </main>
     </div>
   );
 }

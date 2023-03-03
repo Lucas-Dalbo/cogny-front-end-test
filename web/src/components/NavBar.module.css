@@ -1,0 +1,31 @@
+.header {
+  background-color: #191920;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 0;
+}
+
+.cart {
+  margin-right: 10%;
+}
+
+.cart * {
+  margin: 0;
+}
+
+.cart a {
+  color: white;
+  text-decoration: none;
+}
+
+.cart :hover{
+  cursor: pointer;
+  color: lightsteelblue;
+}
+
+.image {
+  align-self: center;
+  margin-left: 10%;
+  text-decoration: none;
+}
