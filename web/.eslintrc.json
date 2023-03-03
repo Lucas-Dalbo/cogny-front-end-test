@@ -1,6 +1,6 @@
 {
   "extends": "@trybe/eslint-config-frontend",
   "rules": {
-    "eslint-disable import/extensions": "true"
+    "import/extensions": "off"
   }
 }
