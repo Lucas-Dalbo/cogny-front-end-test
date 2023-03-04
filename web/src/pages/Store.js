@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import NavBar from '../components/NavBar.js';
 import StoreCard from '../components/StoreCard.js';
 import { getProducts } from '../firebase/products.js';
+import styles from './Store.module.css';
 
 export default function Store() {
   const [products, setProducts] = useState([]);
@@ -24,7 +25,7 @@ export default function Store() {
   return (
     <div>
       <NavBar />
-      <main>
+      <main className={ styles.container }>
         {
           products.length !== 0 ? (
             products.map((p, id) => (
