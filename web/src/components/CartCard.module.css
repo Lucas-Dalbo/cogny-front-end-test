@@ -1,7 +1,6 @@
 .card {
   border-radius: 5px;
   display: flex;
-  /* flex-flow: wrap; */
   align-items: center;
   justify-content: space-around;
   width: 90%;
@@ -15,7 +14,6 @@
 
 .card img {
   border-radius: 5px;
-  /* min-width: 240px; */
   width: 120px;
   height: 120px;
   object-fit: contain;
@@ -23,5 +21,6 @@
 
 hr {
   width: 90%;
+  border: 1px #99999933 solid;
 }
 
