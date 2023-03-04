@@ -39,3 +39,7 @@
   background-color: rgb(0, 200, 0);
   cursor: pointer;
 }
+
+.btn:disabled {
+  background-color: rgb(0, 200, 0);
+}
