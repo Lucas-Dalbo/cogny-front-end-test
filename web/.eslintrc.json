@@ -1,0 +1,7 @@
+{
+  "extends": "@trybe/eslint-config-frontend",
+  "rules": {
+    "import/extensions": "off",
+    "no-alert": "off"
+  }
+}

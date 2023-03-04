@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import React, { useContext, useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { SaleContext } from './context/SaleContext.js';
 import './App.css';
+import Store from './pages/Store.js';
+import Cart from './pages/Cart.js';
 
 function App() {
+  const { setItens, local } = useContext(SaleContext);
+  console.log('hi');
+
+  useEffect(() => {
+    const localItens = localStorage.getItem(local);
+    if (!localItens) {
+      localStorage.setItem(local, JSON.stringify([]));
+    } else {
+      setItens(JSON.parse(localItens));
+    }
+  }, [setItens, local]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={ <Store /> } />
+      <Route path="/cart" element={ <Cart /> } />
+    </Routes>
   );
 }
 

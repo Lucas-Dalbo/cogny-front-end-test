@@ -1,0 +1,26 @@
+.card {
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.data {
+  font-size: 17px;
+  width: 40%;
+  line-break: auto;
+}
+
+.card img {
+  border-radius: 5px;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+hr {
+  width: 90%;
+  border: 1px #99999933 solid;
+}
+
