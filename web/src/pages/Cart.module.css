@@ -1,0 +1,27 @@
+.container {
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: space-between;
+  margin: 0 15%;
+  min-width: 600px;
+  width: 70%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 5%;
+}
+
+.header h3 {
+  margin: 0;
+  color: #999999;
+  flex-grow: 1;
+}
+
+.header :first-child {
+  flex-grow: 3;
+  margin-left: 25%;
+}
