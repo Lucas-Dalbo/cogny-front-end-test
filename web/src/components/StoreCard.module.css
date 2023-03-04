@@ -5,6 +5,7 @@
   flex-flow: wrap column;
   margin-bottom: 13px;
   max-width: 280px;
+  min-width: 180px;
   width: 32%;
 }
 
@@ -29,27 +30,12 @@
   border: none;
   border-radius: 5px;
   color: white;
-  display: flex;
   font-size: 18px;
-  justify-content: center;
   min-height: 50px;
   padding: 0;
 }
 
 .btn:hover {
-  border: 5px #812034;
+  background-color: rgb(0, 200, 0);
   cursor: pointer;
-}
-
-/* .q {
-  align-self: center;
-  background-color: rgba(0, 0, 0, 0.280);
-  height: 100%;
-  width: 20%;
-} */
-
-.t {
-  align-self: center;
-  flex-grow: 1;
-  width: 80%;
 }
