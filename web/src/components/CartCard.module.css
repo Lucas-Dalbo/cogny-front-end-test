@@ -2,14 +2,9 @@
   border-radius: 5px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 90%;
-}
-
-.data {
-  font-size: 17px;
-  width: 40%;
-  line-break: auto;
+  margin: 0 2.5%;
 }
 
 .card img {
@@ -17,6 +12,46 @@
   width: 120px;
   height: 120px;
   object-fit: contain;
+  margin: 0 10px;
+  width: 25%;
+}
+
+.data {
+  font-size: 17px;
+  line-break: auto;
+  text-align: auto;
+  width: 25%;
+}
+
+.total {
+  text-align: center;
+  width: 25%;
+}
+
+.quant {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  /* flex-flow: column wrap; */
+  width: 25%;
+}
+
+.quant p {
+  margin: 0 8px;
+}
+
+.quant button {
+  background-color: #F8375D;
+  border-radius: 100%;
+  border: #F8375D solid 2px;
+  color: white;
+  padding: 5px 10px;
+}
+
+.quant button:hover {
+  background-color: #6d1829;
+  border: #6d1829 solid 2px;
+  cursor: pointer;
 }
 
 hr {
