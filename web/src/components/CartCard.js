@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './CartCard.module.css';
 
-export default function CartCard({ product, id, addOne, removeOne }) {
+export default function CartCard({ product, id, addOne, removeOne, removeAll }) {
   const { name, image, price, quantity } = product;
 
   return (
@@ -15,6 +15,7 @@ export default function CartCard({ product, id, addOne, removeOne }) {
         </div>
         <div className={ styles.quant }>
           <button
+            className={ styles.quantBtn }
             type="button"
             value={ id }
             onClick={ addOne }
@@ -23,6 +24,7 @@ export default function CartCard({ product, id, addOne, removeOne }) {
           </button>
           <p>{ quantity }</p>
           <button
+            className={ styles.quantBtn }
             type="button"
             value={ id }
             onClick={ removeOne }
@@ -34,6 +36,14 @@ export default function CartCard({ product, id, addOne, removeOne }) {
         <h3 className={ styles.total }>
           { `R$ ${(price * quantity).toFixed(2).replace('.', ',')}` }
         </h3>
+        <button
+          type="button"
+          className={ styles.removeBtn }
+          value={ id }
+          onClick={ removeAll }
+        >
+          <i className="fa fa-trash-o" />
+        </button>
       </div>
       <hr />
     </div>
@@ -50,4 +60,5 @@ CartCard.propTypes = {
   id: PropTypes.number.isRequired,
   addOne: PropTypes.func.isRequired,
   removeOne: PropTypes.func.isRequired,
+  removeAll: PropTypes.func.isRequired,
 };

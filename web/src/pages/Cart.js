@@ -36,6 +36,13 @@ export default function Cart() {
     setItens([...itens]);
   };
 
+  const removeAll = ({ target }) => {
+    const id = Number(target.value);
+    itens.splice(id, 1);
+    localStorage.setItem(local, JSON.stringify(itens));
+    setItens([...itens]);
+  };
+
   useEffect(() => {
     const calculateTotal = () => {
       const sum = itens.reduce((acc, crr) => {
@@ -59,6 +66,7 @@ export default function Cart() {
               <h3>PRODUTO</h3>
               <h3>QTD</h3>
               <h3>PREÇO</h3>
+              <h3> </h3>
             </div>
             {
               itens.map((p, id) => (
@@ -68,6 +76,7 @@ export default function Cart() {
                   id={ id }
                   addOne={ addOne }
                   removeOne={ removeOne }
+                  removeAll={ removeAll }
                 />
               ))
             }
