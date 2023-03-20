@@ -9,7 +9,6 @@
 
 .card img {
   border-radius: 5px;
-  width: 120px;
   height: 120px;
   object-fit: contain;
   width: 20%;
@@ -31,14 +30,14 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  width: 25%;
+  width: 20%;
 }
 
 .quant p {
   margin: 0 8px;
 }
 
-.quant button {
+.quantBtn {
   background-color: #F8375D;
   border-radius: 100%;
   border: #F8375D solid 2px;
@@ -46,21 +45,33 @@
   padding: 5px 10px;
 }
 
-.quant button:hover {
+.quantBtn:hover {
   background-color: #6d1829;
   border: #6d1829 solid 2px;
   cursor: pointer;
 }
 
-.quant button:disabled {
+.quantBtn:disabled {
   background-color: #6d1829;
   border: #6d1829 solid 2px;
   cursor: auto;
 }
 
+.removeBtn {
+  background-color: white;
+  border: none;
+  color: red;
+  font-weight: 600;
+  font-size: 25px;
+  width: 5%;
+}
+
+.removeBtn:hover {
+  cursor: pointer;
+}
 
 hr {
-  width: 90%;
   border: 1px #99999933 solid;
+  width: 90%;
 }
 
