@@ -17,25 +17,37 @@
   display: flex;
   justify-content: space-around;
   margin: 15px 5%;
+  text-align: center;
+  width: 90%;
 }
 
 .header h3 {
   margin: 0;
   color: #999999;
-  flex-grow: 1;
 }
 
 .header :first-child {
-  flex-grow: 3;
-  margin-left: 25%;
+  width: 45%;
+}
+
+.header :nth-child(2) {
+  width: 20%;
+}
+
+.header :nth-child(3) {
+  width: 25%;
+}
+
+.header :nth-child(4) {
+  width: 5%;
 }
 
 .bottom {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  width: 90%;
-  margin: 0 5%;
+  width: 80%;
+  margin: 0 10%;
   height: 125px;
 }
 

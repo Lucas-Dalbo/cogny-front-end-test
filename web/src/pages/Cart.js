@@ -22,6 +22,27 @@ export default function Cart() {
     }
   };
 
+  const addOne = ({ target }) => {
+    const id = Number(target.value);
+    itens[id].quantity += 1;
+    localStorage.setItem(local, JSON.stringify(itens));
+    setItens([...itens]);
+  };
+
+  const removeOne = ({ target }) => {
+    const id = Number(target.value);
+    itens[id].quantity -= 1;
+    localStorage.setItem(local, JSON.stringify(itens));
+    setItens([...itens]);
+  };
+
+  const removeAll = ({ target }) => {
+    const id = Number(target.value);
+    itens.splice(id, 1);
+    localStorage.setItem(local, JSON.stringify(itens));
+    setItens([...itens]);
+  };
+
   useEffect(() => {
     const calculateTotal = () => {
       const sum = itens.reduce((acc, crr) => {
@@ -38,27 +59,27 @@ export default function Cart() {
   return (
     <div>
       <NavBar />
-      <main className={ styles.container }>
-        {
-          itens.length > 0 && (
+      {
+        itens.length > 0 ? (
+          <main className={ styles.container }>
             <div className={ styles.header }>
               <h3>PRODUTO</h3>
               <h3>QTD</h3>
               <h3>PREÇO</h3>
+              <h3> </h3>
             </div>
-          )
-        }
-        {
-          itens.length > 0 ? (
-            itens.map((p, id) => (
-              <CartCard key={ id } product={ p } />
-            ))
-          ) : (
-            <h1>Ainda sem produtos no carrinho!</h1>
-          )
-        }
-        {
-          itens.length !== 0 && (
+            {
+              itens.map((p, id) => (
+                <CartCard
+                  key={ id }
+                  product={ p }
+                  id={ id }
+                  addOne={ addOne }
+                  removeOne={ removeOne }
+                  removeAll={ removeAll }
+                />
+              ))
+            }
             <div className={ styles.bottom }>
               <button onClick={ onClick }>
                 FINALIZAR PEDIDO
@@ -68,9 +89,13 @@ export default function Cart() {
                 <h2>{`R$ ${total.toFixed(2).replace('.', ',')}`}</h2>
               </div>
             </div>
-          )
-        }
-      </main>
+          </main>
+        ) : (
+          <main className={ styles.container }>
+            <h1>Ainda sem produtos no carrinho!</h1>
+          </main>
+        )
+      }
     </div>
   );
 }
