@@ -51,7 +51,7 @@ export default function Cart() {
         {
           itens.length > 0 ? (
             itens.map((p, id) => (
-              <CartCard key={ id } product={ p } />
+              <CartCard key={ id } product={ p } id={ id } />
             ))
           ) : (
             <h1>Ainda sem produtos no carrinho!</h1>

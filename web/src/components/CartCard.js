@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './CartCard.module.css';
 
-export default function CartCard({ product }) {
+export default function CartCard({ product, id }) {
   const { name, image, price, quantity } = product;
+  console.log(id);
 
   return (
     <div>
@@ -13,8 +14,16 @@ export default function CartCard({ product }) {
           <p>{ name }</p>
           <h3>{ `R$ ${price.toFixed(2).replace('.', ',')}` }</h3>
         </div>
-        <p>{ quantity }</p>
-        <h3>{ `R$ ${price.toFixed(2).replace('.', ',')}` }</h3>
+        <div className={ styles.quant }>
+          <button type="button">
+            Δ
+          </button>
+          <p>{ quantity }</p>
+          <button type="button">
+            ∇
+          </button>
+        </div>
+        <h3 className={ styles.total }>{ `R$ ${price.toFixed(2).replace('.', ',')}` }</h3>
       </div>
       <hr />
     </div>
@@ -28,4 +37,5 @@ CartCard.propTypes = {
     price: PropTypes.number,
     quantity: PropTypes.number,
   }).isRequired,
+  id: PropTypes.number.isRequired,
 };
