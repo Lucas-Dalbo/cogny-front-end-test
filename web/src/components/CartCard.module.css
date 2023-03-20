@@ -12,15 +12,14 @@
   width: 120px;
   height: 120px;
   object-fit: contain;
-  margin: 0 10px;
-  width: 25%;
+  width: 20%;
 }
 
 .data {
   font-size: 17px;
   line-break: auto;
   text-align: auto;
-  width: 25%;
+  width: 30%;
 }
 
 .total {
@@ -32,7 +31,6 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  /* flex-flow: column wrap; */
   width: 25%;
 }
 
@@ -53,6 +51,13 @@
   border: #6d1829 solid 2px;
   cursor: pointer;
 }
+
+.quant button:disabled {
+  background-color: #6d1829;
+  border: #6d1829 solid 2px;
+  cursor: auto;
+}
+
 
 hr {
   width: 90%;
