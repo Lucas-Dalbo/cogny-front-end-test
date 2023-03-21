@@ -3,8 +3,7 @@
   border-radius: 5px;
   display: flex;
   flex-flow: wrap column;
-  margin: 0 7px;
-  margin-bottom: 14px;
+  margin: 7px;
   max-width: 240px;
   min-width: 180px;
   width: 30%;

@@ -2,9 +2,8 @@
   display: flex;
   flex-flow: wrap;
   justify-content: center;
-  margin: 0 15%;
-  min-width: 600px;
-  width: 70%;
+  margin: 0 10%;
+  width: 80%;
 }
 
 .container h1, .container h2 {
