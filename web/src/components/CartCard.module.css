@@ -7,18 +7,23 @@
   margin: 0 2.5%;
 }
 
-.card img {
-  border-radius: 5px;
-  height: 120px;
-  object-fit: contain;
-  width: 20%;
+.info {
+  display: flex;
+  width: 50%;
 }
 
-.data {
+.info img {
+  border-radius: 5px;
+  height: 120px;
+  object-fit: scale-down;
+  width: 50%;
+}
+
+.info .data {
   font-size: 17px;
   line-break: auto;
   text-align: auto;
-  width: 30%;
+  width: 50%;
 }
 
 .total {

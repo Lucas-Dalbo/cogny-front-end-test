@@ -8,10 +8,12 @@ export default function CartCard({ product, id, addOne, removeOne, removeAll }) 
   return (
     <div>
       <div className={ styles.card }>
-        <img src={ image } alt={ name } />
-        <div className={ styles.data }>
-          <p>{ name }</p>
-          <h3>{ `R$ ${price.toFixed(2).replace('.', ',')}` }</h3>
+        <div className={ styles.info }>
+          <img src={ image } alt={ name } />
+          <div className={ styles.data }>
+            <p>{ name }</p>
+            <h3>{ `R$ ${price.toFixed(2).replace('.', ',')}` }</h3>
+          </div>
         </div>
         <div className={ styles.quant }>
           <button
