@@ -81,3 +81,25 @@
     width: 90%;
   }
 }
+
+@media screen and (max-width: 590px) {
+  .container {
+    align-items: center;
+    width: auto;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .bottom {
+    flex-flow: column-reverse;
+    justify-content: space-around;
+    height: 120;
+    padding-bottom: 5px;
+  }
+
+  .bottom h2, .bottom p{
+    margin-bottom: 0;
+  }
+}
