@@ -1,3 +1,7 @@
+.container {
+  width: 100%;
+}
+
 .card {
   border-radius: 5px;
   display: flex;
@@ -33,7 +37,7 @@
 
 .total {
   text-align: center;
-  width: 40%;
+  width: 50%;
 }
 
 .quant {
@@ -86,10 +90,6 @@ hr {
 }
 
 @media screen and (max-width: 590px) {
-  .container {
-    width: 100%;
-  }
-
   .card {
     background-color: white;
     flex-flow: column;
@@ -119,6 +119,15 @@ hr {
   .quant {
     align-items: center;
     justify-content: space-around;
+    width: 40%;
+  }
+
+  .total {
+    width: 40%;
+  }
+
+  .removeBtn {
+    width: 10%;
   }
 }
 
