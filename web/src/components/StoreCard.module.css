@@ -3,18 +3,23 @@
   border-radius: 5px;
   display: flex;
   flex-flow: wrap column;
-  margin: 0 7px;
-  margin-bottom: 14px;
+  margin: 7px;
   max-width: 240px;
   min-width: 180px;
   width: 30%;
 }
 
-.card p, .card h3, .card button {
+.info {
+  display: flex;
+  flex-flow: wrap column;
+  width: 100%;
+}
+
+.info p, .info h3, .info button {
   margin: 0 5% 5% 5%;
 }  
 
-.card p, .card h3 {
+.info p, .info h3 {
   font-size: 18px;
 }
 
@@ -43,4 +48,33 @@
 .btn:disabled {
   background-color: rgb(0, 200, 0);
   cursor: auto;
+}
+
+@media screen and (max-width: 450px) {
+  .card {
+    flex-flow: row wrap;
+    justify-content: space-around;
+    height: 140px;
+    padding: 5px 0;
+    min-width: 80%;
+  }
+
+  .card img {
+    border-radius: 5px;
+    margin: 0;
+    max-width: 40%;
+    object-fit: fill;
+  }
+
+  .info {
+    display: flex;
+    flex-flow: wrap column;
+    justify-content: space-evenly;
+    width: 50%;
+  }
+
+  .info p, .info h3, .info button {
+    margin: 0;
+  }  
+
 }

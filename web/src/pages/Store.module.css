@@ -2,11 +2,19 @@
   display: flex;
   flex-flow: wrap;
   justify-content: center;
-  margin: 0 15%;
-  min-width: 600px;
-  width: 70%;
+  margin: 0 10%;
+  padding-top: 90px;
+  width: 80%;
 }
 
 .container h1, .container h2 {
   color: white;
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    padding-top: 70px;
+    width: 100%;
+    margin: 0;
+  }
 }

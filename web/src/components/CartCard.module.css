@@ -1,3 +1,7 @@
+.container {
+  width: 100%;
+}
+
 .card {
   border-radius: 5px;
   display: flex;
@@ -7,30 +11,40 @@
   margin: 0 2.5%;
 }
 
-.card img {
-  border-radius: 5px;
-  height: 120px;
-  object-fit: contain;
-  width: 20%;
+.info {
+  display: flex;
+  width: 50%;
 }
 
-.data {
+.info img {
+  border-radius: 5px;
+  height: 120px;
+  object-fit: scale-down;
+  width: 50%;
+}
+
+.info .data {
   font-size: 17px;
   line-break: auto;
   text-align: auto;
-  width: 30%;
+  width: 50%;
+}
+
+.options {
+  display: flex;
+  width: 50%;
 }
 
 .total {
   text-align: center;
-  width: 25%;
+  width: 50%;
 }
 
 .quant {
   align-items: center;
   display: flex;
   justify-content: center;
-  width: 20%;
+  width: 40%;
 }
 
 .quant p {
@@ -63,7 +77,7 @@
   color: red;
   font-weight: 600;
   font-size: 25px;
-  width: 5%;
+  width: 10%;
 }
 
 .removeBtn:hover {
@@ -73,5 +87,47 @@
 hr {
   border: 1px #99999933 solid;
   width: 90%;
+}
+
+@media screen and (max-width: 590px) {
+  .card {
+    background-color: white;
+    flex-flow: column;
+    margin: 0;
+    width: 100%;
+  }
+
+  .info {
+    align-items: center;
+    width: 100%;
+  }
+
+  .info * {
+    margin: 5px 0;
+  }
+
+  .options {
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+  }
+
+  .options * {
+    margin: 0;
+  }
+
+  .quant {
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+  }
+
+  .total {
+    width: 40%;
+  }
+
+  .removeBtn {
+    width: 10%;
+  }
 }
 

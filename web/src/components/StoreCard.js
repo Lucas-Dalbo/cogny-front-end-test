@@ -20,18 +20,20 @@ export default function StoreCard({ product, onClick }) {
   return (
     <div className={ styles.card }>
       <img src={ image } alt={ name } />
-      <p>{ name }</p>
-      <h3>{ `R$ ${price.toFixed(2).replace('.', ',')}` }</h3>
-      <button
-        onClick={ onClick }
-        className={ styles.btn }
-        value={ JSON.stringify(product) }
-        disabled={ disabled }
-      >
-        {
-          !disabled ? 'ADICIONAR AO CARRINHO' : 'ADICIONADO'
-        }
-      </button>
+      <div className={ styles.info }>
+        <p>{ name }</p>
+        <h3>{ `R$ ${price.toFixed(2).replace('.', ',')}` }</h3>
+        <button
+          onClick={ onClick }
+          className={ styles.btn }
+          value={ JSON.stringify(product) }
+          disabled={ disabled }
+        >
+          {
+            !disabled ? 'ADICIONAR AO CARRINHO' : 'ADICIONADO'
+          }
+        </button>
+      </div>
     </div>
   );
 }

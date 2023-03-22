@@ -4,8 +4,7 @@
   display: flex;
   flex-flow: wrap column;
   justify-content: space-between;
-  margin: 0 15%;
-  min-width: 600px;
+  margin: 100px 15%;
   width: 70%;
 }
 
@@ -73,4 +72,34 @@
 
 .bottom div p {
   color: #999999;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    border-radius: 5px;
+    margin: 100px 5%;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .container {
+    align-items: center;
+    width: auto;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .bottom {
+    flex-flow: column-reverse;
+    justify-content: space-around;
+    height: 120;
+    padding-bottom: 5px;
+  }
+
+  .bottom h2, .bottom p{
+    margin-bottom: 0;
+  }
 }
