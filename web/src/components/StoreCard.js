@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './StoreCard.module.css';
 import { SaleContext } from '../context/SaleContext.js';
 
-export default function StoreCard({ product, onClick }) {
+export default function StoreCard({ product, onClickAdd, onClickRemove }) {
   const { name, image, price } = product;
   const { itens } = useContext(SaleContext);
   const [btnType, setBtnType] = useState(false);
@@ -24,12 +24,12 @@ export default function StoreCard({ product, onClick }) {
         <p>{ name }</p>
         <h3>{ `R$ ${price.toFixed(2).replace('.', ',')}` }</h3>
         <button
-          onClick={ !btnType && onClick }
+          onClick={ !btnType ? onClickAdd : onClickRemove }
           className={ !btnType ? styles.btnAdd : styles.btnRemove }
           value={ JSON.stringify(product) }
         >
           {
-            !btnType ? 'ADICIONAR' : 'REMOVER'
+            !btnType ? 'ADICIONAR 🛒' : 'REMOVER 🛒'
           }
         </button>
       </div>
@@ -43,5 +43,6 @@ StoreCard.propTypes = {
     image: PropTypes.string,
     price: PropTypes.number,
   }).isRequired,
-  onClick: PropTypes.func.isRequired,
+  onClickAdd: PropTypes.func.isRequired,
+  onClickRemove: PropTypes.func.isRequired,
 };

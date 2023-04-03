@@ -10,7 +10,7 @@ export default function Store() {
   const [products, setProducts] = useState([]);
   const [err, setErr] = useState(null);
 
-  const onClick = ({ target }) => {
+  const onClickAdd = ({ target }) => {
     const { value } = target;
     const trueValue = JSON.parse(value);
     const isItem = itens.findIndex((p) => p.name === trueValue.name);
@@ -19,6 +19,14 @@ export default function Store() {
       localStorage.setItem(local, JSON.stringify(updatedItens));
       setItens(updatedItens);
     }
+  };
+
+  const onClickRemove = ({ target }) => {
+    const { value } = target;
+    const trueValue = JSON.parse(value);
+    const updatedItens = itens.filter((p) => p.name !== trueValue.name);
+    localStorage.setItem(local, JSON.stringify(updatedItens));
+    setItens([...updatedItens]);
   };
 
   useEffect(() => {
@@ -42,7 +50,12 @@ export default function Store() {
         {
           products.length !== 0 ? (
             products.map((p, id) => (
-              <StoreCard key={ id } product={ p } onClick={ onClick } />
+              <StoreCard
+                key={ id }
+                product={ p }
+                onClickAdd={ onClickAdd }
+                onClickRemove={ onClickRemove }
+              />
             ))
           ) : (
             <h1>Carregando...</h1>

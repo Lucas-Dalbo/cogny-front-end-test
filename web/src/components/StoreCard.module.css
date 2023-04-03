@@ -50,8 +50,12 @@
 }
 
 .btnRemove:hover {
-  background-color: #F8375D;
+  background-color: rgb(200, 0, 0);
   cursor: pointer;
+}
+
+.btnRemove:hover::content {
+  content: "REMOVER";
 }
 
 @media screen and (max-width: 450px) {
