@@ -1,0 +1,26 @@
+.line {
+  width: 95%;
+}
+
+.author {
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.links a {
+  color: white;
+  font-size: 36px;
+  text-decoration: none;
+  margin: 5px 10px;
+}
+
+.links a:hover {
+  color: rgb(0, 200, 0);
+}

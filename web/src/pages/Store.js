@@ -4,6 +4,7 @@ import StoreCard from '../components/StoreCard.js';
 import { getProducts } from '../firebase/products.js';
 import styles from './Store.module.css';
 import { SaleContext } from '../context/SaleContext.js';
+import Footer from '../components/Footer.js';
 
 export default function Store() {
   const { itens, setItens, local } = useContext(SaleContext);
@@ -65,6 +66,7 @@ export default function Store() {
           err && (<h2>{ err }</h2>)
         }
       </main>
+      <Footer />
     </div>
   );
 }
