@@ -30,7 +30,7 @@
   margin: 5%;
 }
 
-.btn {
+.btnAdd, .btnRemove {
   background-color: #F8375D;
   border: none;
   border-radius: 5px;
@@ -40,14 +40,18 @@
   padding: 0;
 }
 
-.btn:hover {
+.btnAdd:hover {
   background-color: rgb(0, 200, 0);
   cursor: pointer;
 }
 
-.btn:disabled {
+.btnRemove {
   background-color: rgb(0, 200, 0);
-  cursor: auto;
+}
+
+.btnRemove:hover {
+  background-color: #F8375D;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 450px) {
