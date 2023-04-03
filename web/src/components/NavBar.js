@@ -18,7 +18,9 @@ export default function NavBar() {
       <div className={ styles.cart }>
         <Link to="/cart">
           <h3>Meu carrinho</h3>
-          <p>{`${itens.length} item(s)`}</p>
+          <p>
+            {`${itens.length} item(s)`}
+          </p>
         </Link>
       </div>
     </header>

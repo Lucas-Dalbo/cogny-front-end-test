@@ -29,8 +29,9 @@ export default function StoreCard({ product, onClickAdd, onClickRemove }) {
           value={ JSON.stringify(product) }
         >
           {
-            !btnType ? 'ADICIONAR 🛒' : 'REMOVER 🛒'
+            !btnType ? 'ADICIONAR ' : 'REMOVER '
           }
+          <i className="fa-solid fa-cart-shopping" />
         </button>
       </div>
     </div>

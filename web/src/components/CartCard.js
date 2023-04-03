@@ -45,7 +45,7 @@ export default function CartCard({ product, id, addOne, removeOne, removeAll }) 
             value={ id }
             onClick={ removeAll }
           >
-            <i className="fa fa-trash-o" />
+            <span className="fa-solid fa-trash-can" />
           </button>
         </div>
       </div>

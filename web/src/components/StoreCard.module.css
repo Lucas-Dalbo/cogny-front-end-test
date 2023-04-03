@@ -54,9 +54,6 @@
   cursor: pointer;
 }
 
-.btnRemove:hover::content {
-  content: "REMOVER";
-}
 
 @media screen and (max-width: 450px) {
   .card {
