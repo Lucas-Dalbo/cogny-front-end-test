@@ -3,7 +3,7 @@ import styles from './Footer.module.css';
 
 export default function Footer() {
   return (
-    <>
+    <footer>
       <hr className={ styles.line } />
       <h3 className={ styles.author }>Lucas Dalbo Fernandes</h3>
       <div className={ styles.links }>
@@ -18,6 +18,6 @@ export default function Footer() {
           <span className="fa-brands fa-linkedin" />
         </a>
       </div>
-    </>
+    </footer>
   );
 }

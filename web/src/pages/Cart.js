@@ -4,6 +4,7 @@ import { SaleContext } from '../context/SaleContext.js';
 import { saveSale } from '../firebase/sales.js';
 import styles from './Cart.module.css';
 import CartCard from '../components/CartCard.js';
+import Footer from '../components/Footer.js';
 
 export default function Cart() {
   const { itens, setItens, local } = useContext(SaleContext);
@@ -96,6 +97,7 @@ export default function Cart() {
           </main>
         )
       }
+      <Footer />
     </div>
   );
 }
